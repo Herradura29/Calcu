@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Neon Calculator</title>
+  <meta name="description" content="A modern, responsive neon calculator built with HTML, CSS, and vanilla JavaScript." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="calculator" aria-label="Modern calculator">
+      <div class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>Modern Calculator</span>
+        </div>
+        <div class="status">Vanilla JS</div>
+      </div>
+
+      <div class="display" aria-live="polite">
+        <div class="hint-row">
+          <span>Calculator</span>
+          <span>Responsive</span>
+        </div>
+        <div class="history" id="history"></div>
+        <div class="screen" id="screen">0</div>
+      </div>
+
+      <div class="keys" role="group" aria-label="Calculator keys">
+        <button class="btn clear" data-action="clear" aria-label="Clear all">AC</button>
+        <button class="btn operator" data-action="delete" aria-label="Delete last character">DEL</button>
+        <button class="btn operator" data-value="%" aria-label="Percent">%</button>
+        <button class="btn operator" data-value="/" aria-label="Divide">÷</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="*" aria-label="Multiply">×</button>
+
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn operator" data-value="-">−</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="+">+</button>
+
+        <button class="btn zero" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn equal" data-action="calculate" aria-label="Equals">=</button>
+      </div>
+
+      <p class="footer-note">Supports mouse, touch, and keyboard input.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
